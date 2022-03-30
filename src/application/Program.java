@@ -38,11 +38,14 @@ public class Program {
 		System.out.println("Inserted! Id number = " + newSeller.getId());*/
 	
 		System.out.println("\n=== TEST 5: Seller update ===");
-		seller = sellerDao.findById(6);
-		seller.setEmail("alpink@outlook.com");
+		seller = sellerDao.findById(1);
+		seller.setBaseSalary(2200.0);
 		sellerDao.update(seller);
 		System.out.println("Update succesful!");
 	
+		System.out.println("\n=== TEST 6: Seller delete ===");
+		sellerDao.deleteById(10);
+		System.out.println("Seller deleted from database");
 	}
 
 }
